@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Train Schedules</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/train-browser.ico">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Geethika Koppisetty</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="https://gkoppisetty96.github.io">Back Home</a>
+                <a class="nav-item nav-link disabled" href="#">Train Schedule</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="header">
+        <h1>Train Schedule</h1>
+        <h3>Check below to see if you're on time</h3>
+        <br>
+        <h4>Current Time: <span id="curT"></span></h4>
+    </div>
+
+    <div class="container-fluid" id="everything">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <div class="card" id= "schedule">
+                    <h5 class="card-header">
+                        Current Train Schedule
+                    </h5>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Train Name
+                                    </th>
+                                    <th>
+                                        Destination
+                                    </th>
+                                    <th>
+                                        Frequency (min)
+                                    </th>
+                                    <th>
+                                        Next Arrival
+                                    </th>
+                                    <th>
+                                        Minutes Away
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="trainTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+
+
+        <div class="row" id="formhere">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <h5 class="card-header">
+                        Add Train
+                    </h5>
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="form-group">
+                                Train Name:<br>
+                                <input class="form-control" type="text" placeholder="Hogwarts Express" id="name-input">
+                                <br>
+                                Destination:<br>
+                                <input class="form-control" type="text" placeholder="London" id="place-input">
+                                <br>
+                                First Train Time:<br>
+                                <input class="form-control" id="time-input" placeholder="HH:mm (military time)">
+                                <br>
+                                Frequency (min):<br>
+                                <input class="form-control" type="text" placeholder="45" id="frequency-input">
+                                <br>
+                                <br>
+                                <button type="button" class="btn btn-outline-dark" type="submit" value="Submit"
+                                    id="submit">
+                                    Submit </button>
+                                <br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <span id="footer-info">
+            Copyright &copy; 2019 Geethika Koppisetty
+        </span>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
